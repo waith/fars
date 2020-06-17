@@ -15,7 +15,6 @@
 #' fars_map_state(18, 2015)
 #' }
 #' @import maps
-#' @import dplyr
 #' @import tidyr
 #' @import readr
 #' @import graphics
