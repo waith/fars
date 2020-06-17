@@ -2,7 +2,7 @@
 % Please edit documentation in R/functions.R
 \name{fars_read}
 \alias{fars_read}
-\title{Define 5 functions}
+\title{Define 5 functions for export : need to add export before each function}
 \usage{
 fars_read(filename)
 }
