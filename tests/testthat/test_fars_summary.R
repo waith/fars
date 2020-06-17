@@ -1,4 +1,3 @@
-context("functions")
 
 test_that("single year data is summarized successfully", {
   setwd(system.file("extdata", package = "fars"))
