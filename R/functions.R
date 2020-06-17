@@ -1,4 +1,4 @@
-#' Define 5 functions for export
+#' Define 5 functions for export : need to add export before each function
 #'
 #' \code{fars_read(filename)} read csv file with name filename
 #' \code{make_filename(year)} make csv file of the year
