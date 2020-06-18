@@ -9,17 +9,18 @@
 #' @param state.num Number representing a US state.
 #' @param year  a single year
 #' @param years a list of years
+#' @param filename is the location of the data file
+#'
 #' @return NULL
 #' @examples
 #' \dontrun{
 #' fars_map_state(18, 2015)
 #' }
+#'
 #' @import maps
 #' @import tidyr
 #' @import readr
 #' @import graphics
-
-
 #' @export
 fars_read <- function(filename) {
         if(!file.exists(filename))
@@ -30,12 +31,58 @@ fars_read <- function(filename) {
         tibble::as_tibble(data)
 }
 
+#' Define 5 functions for export : need to add export before each function
+#'
+#' \code{fars_read(filename)} read csv file with name filename
+#' \code{make_filename(year)} make csv file of the year
+#' \code{fars_read_years(years)} make csv file of years
+#' \code{fars_summarize_years(years)} summarise data of years.
+#' \code{fars_map_state(state.num, year)} plot map of the state.num
+#'
+#' @param state.num Number representing a US state.
+#' @param year  a single year
+#' @param years a list of years
+#' @param filename is the location of the data file
+#'
+#' @return NULL
+#' @examples
+#' \dontrun{
+#' fars_map_state(18, 2015)
+#' }
+#'
+#' @import maps
+#' @import tidyr
+#' @import readr
+#' @import graphics
 #' @export
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
 }
 
+#' Define 5 functions for export : need to add export before each function
+#'
+#' \code{fars_read(filename)} read csv file with name filename
+#' \code{make_filename(year)} make csv file of the year
+#' \code{fars_read_years(years)} make csv file of years
+#' \code{fars_summarize_years(years)} summarise data of years.
+#' \code{fars_map_state(state.num, year)} plot map of the state.num
+#'
+#' @param state.num Number representing a US state.
+#' @param year  a single year
+#' @param years a list of years
+#' @param filename is the location of the data file
+#'
+#' @return NULL
+#' @examples
+#' \dontrun{
+#' fars_map_state(18, 2015)
+#' }
+#'
+#' @import maps
+#' @import tidyr
+#' @import readr
+#' @import graphics
 #' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
@@ -51,6 +98,29 @@ fars_read_years <- function(years) {
         })
 }
 
+#' Define 5 functions for export : need to add export before each function
+#'
+#' \code{fars_read(filename)} read csv file with name filename
+#' \code{make_filename(year)} make csv file of the year
+#' \code{fars_read_years(years)} make csv file of years
+#' \code{fars_summarize_years(years)} summarise data of years.
+#' \code{fars_map_state(state.num, year)} plot map of the state.num
+#'
+#' @param state.num Number representing a US state.
+#' @param year  a single year
+#' @param years a list of years
+#' @param filename is the location of the data file
+#'
+#' @return NULL
+#' @examples
+#' \dontrun{
+#' fars_map_state(18, 2015)
+#' }
+#'
+#' @import maps
+#' @import tidyr
+#' @import readr
+#' @import graphics
 #' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
@@ -60,6 +130,29 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
+#' Define 5 functions for export : need to add export before each function
+#'
+#' \code{fars_read(filename)} read csv file with name filename
+#' \code{make_filename(year)} make csv file of the year
+#' \code{fars_read_years(years)} make csv file of years
+#' \code{fars_summarize_years(years)} summarise data of years.
+#' \code{fars_map_state(state.num, year)} plot map of the state.num
+#'
+#' @param state.num Number representing a US state.
+#' @param year  a single year
+#' @param years a list of years
+#' @param filename is the location of the data file
+#'
+#' @return NULL
+#' @examples
+#' \dontrun{
+#' fars_map_state(18, 2015)
+#' }
+#'
+#' @import maps
+#' @import tidyr
+#' @import readr
+#' @import graphics
 #' @export
 fars_map_state <- function(state.num, year) {
         filename <- make_filename(year)
