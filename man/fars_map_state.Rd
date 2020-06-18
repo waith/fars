@@ -10,10 +10,6 @@ fars_map_state(state.num, year)
 \item{state.num}{Number representing a US state.}
 
 \item{year}{a single year}
-
-\item{years}{a list of years}
-
-\item{filename}{is the location of the data file}
 }
 \description{
 \code{fars_read(filename)} read csv file with name filename

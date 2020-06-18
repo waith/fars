@@ -8,12 +8,6 @@ fars_summarize_years(years)
 }
 \arguments{
 \item{years}{a list of years}
-
-\item{state.num}{Number representing a US state.}
-
-\item{year}{a single year}
-
-\item{filename}{is the location of the data file}
 }
 \description{
 \code{fars_read(filename)} read csv file with name filename
